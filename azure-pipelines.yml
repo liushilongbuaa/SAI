@@ -36,4 +36,9 @@ stages:
         export ANSI_COLORS_DISABLED=1
         cd meta
         make
+        git ls-files --others
+        ls ../ -al
       displayName: "Metadata check"
+    - publish: $(Build.SourcesDirectory)
+      artifact: sai
+
